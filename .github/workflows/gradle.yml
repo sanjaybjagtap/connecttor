@@ -27,8 +27,7 @@ jobs:
       #     distribution: 'adopt'
       #     cache: gradle
 
-      # - name: Grant execute permission for gradlew
-      #   run: chmod +x gradlew
+      
 
       # - name: Build with Gradle
       #   run: ./gradlew build
@@ -39,6 +38,9 @@ jobs:
       #     arguments: build
 
       - uses: actions/checkout@master
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
 
       # try out snyk
       - name: Run Snyk to check for vulnerabilities
