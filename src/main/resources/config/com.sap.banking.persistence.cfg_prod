@@ -1,0 +1,42 @@
+################################################################################
+#
+#	AIMS - SAP Omni-channel Banking common configuration.
+#
+################################################################################
+
+
+#DATABASE Configurations
+db.name=sp05cf_3
+db.host=10.11.37.149
+db.port=5432
+
+db.eclipslink.databasePlatform=org.eclipse.persistence.platform.database.PostgreSQLPlatform
+db.type=POSTGRESQL
+
+#db.connection.type values DRIVER_MANAGER or DATA_SOURCE 
+db.connection.type=DRIVER_MANAGER
+
+# BANK SIM Configurations
+banksim.db.maxconnections=4
+banksim.db.type=POSTGRESQL
+banksim.db.defaultconnections = 2
+
+# Configuration update run interval time in seconds
+configuration.update.schedule.interval.seconds=20
+
+#DataSource Configurations
+datasource.driverClassName=org.postgresql.Driver
+datasource.jdbcUrl=jdbc:postgresql://10.11.37.149:5432/sp05cf_3
+datasource.username=31d912f1ea9860ab9339666f7eca4422
+datasource.password=3aa2bd4b1c5dce3e1fe79db2d3e0703e
+##datasource.jndiName=jdbc/eBanking
+#Set Auto Commit as false. If property not specified default value is true
+datasource.autoCommit=false
+datasource.maximumPoolSize=50
+#Register Hikari CP beans for JMX Logging
+datasource.registerMbeans=true
+
+#Load the updates to OCB Configuration from the OCB_CONFIG table dynamically.
+#This property can be set to true on Developer box to avoid server restart for configuration changes in OCB_CONFIG table.
+#It is recommended to set this property to false on production env.
+dynamic.configuration.update=true

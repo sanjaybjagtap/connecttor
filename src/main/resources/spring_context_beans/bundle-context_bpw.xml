@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- Enable annotation based interception. -->
+	<context:annotation-config/>
+
+	<bean id="BPWAdminBeanImpl" class="com.ffusion.ffs.bpw.BPWAdminBeanImpl" init-method="init" destroy-method="stop"/> <!--depends-on="dataSource,configAdmin,entitlementsService"-->
+	<bean id="BPWServicesBeanImpl" class="com.ffusion.ffs.bpw.BPWServicesBeanImpl"/>
+	<bean id="ACHBPWServicesBeanImpl" class="com.ffusion.ffs.bpw.ACHBPWServicesBeanImpl"/>
+	<bean id="IFXBPWServicesBeanImpl" class="com.ffusion.ffs.bpw.IFXBPWServicesBeanImpl"/>
+	<bean id="OFX151BPWServicesBeanImpl" class="com.ffusion.ffs.bpw.OFX151BPWServicesBeanImpl"/>
+	<bean id="OFX200BPWServicesBeanImpl" class="com.ffusion.ffs.bpw.OFX200BPWServicesBeanImpl"/>
+	<bean id="bpwSchedulerImpl" class="com.ffusion.ffs.scheduling.BPWSchedulerImpl">
+		<property name="bpwAdminBean" ref="BPWAdminBeanImpl"/>
+	</bean>
+
+	<!-- Initialize result processor bean -->
+	<bean id="internalTransferResultProcessorImpl" class="com.sap.banking.bpw.transfer.InternalTransferResultProcessorImpl"/>
+	<bean id="externalTransferResultProcessorImpl" class="com.sap.banking.bpw.transfer.ExternalTransferResultProcessorImpl"/>
+	<bean id="billPayResultProcessorImpl" class="com.sap.banking.bpw.billpay.BillPayResultProcessorImpl"/>
+
+	<bean id="schedulerOperationListener" class="com.ffusion.ffs.scheduling.SchedulerOperationListener"/>
+
+	<bean id="bpwServicesImpl" class="com.ffusion.ffs.bpw.BPWServicesImpl"/>
+	
+	<bean id="bpwServerMonitoring" class="com.sap.banking.bpw.monitoring.BPWServerMonitoringImpl"/>
+	
+	<bean id="bpwServerRegistry" class="com.ffusion.ffs.bpw.db.BPWServerRegistryImpl"/>
+
+    <!-- To avoid 'bpwServerMonitoring': Singleton bean creation not allowed while the singletons of this factory are in destruction error-->
+    <bean id="bpwPostProcessor" class="com.sap.banking.bpw.monitoring.BPWAdminBeanFactoryPostProcessor"/>
+
+    <!--  Initialize Tracking ID Generator -->
+	<bean id="bpwTrackingIdGeneratorRef" class="com.ffusion.ffs.bpw.util.BPWTrackingIDGeneratorImpl" scope="singleton"/>
+
+	<bean id = "backendProvider" class="com.ffusion.ffs.bpw.custimpl.BackendProviderImpl"/>
+
+	<util:list id ="backendProviderServices" value-type="com.ffusion.ffs.bpw.custimpl.interfaces.BackendProvider">
+		<ref bean="backendProvider"/>
+	</util:list>
+
+</beans>

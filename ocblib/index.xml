@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository increment="1530094304968" name="Untitled" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="i18ntools"/>
+      <attribute name="type" value="jarfile"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="3cff34bd6e1086c6ff0dc5311881e95a97205d0e93d05c23aa814ad095d03ea6"/>
+      <attribute name="url" value="i18ntools.jar"/>
+      <attribute name="size" type="Long" value="46145"/>
+      <attribute name="mime" value="application/java-archive"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="mbserv60"/>
+      <attribute name="type" value="jarfile"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="f8e2d2ecd8d9347181bae510457a9d29e930396bd1f0c97225211af24a5b4b72"/>
+      <attribute name="url" value="mbserv60.jar"/>
+      <attribute name="size" type="Long" value="2312034"/>
+      <attribute name="mime" value="application/java-archive"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="MessageBroker"/>
+      <attribute name="type" value="jarfile"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="5bdd9e8f0a545eb5f7959e28673e6457045bc693c473d8859b34b02ad631ee2d"/>
+      <attribute name="url" value="MessageBroker.jar"/>
+      <attribute name="size" type="Long" value="5305307"/>
+      <attribute name="mime" value="application/java-archive"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="OFX151Callback"/>
+      <attribute name="type" value="jarfile"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="183a6cd4b800fd97fdfe521a24db9ff4007a60dac2a42dd6125f18ab1c98f709"/>
+      <attribute name="url" value="OFX151Callback.jar"/>
+      <attribute name="size" type="Long" value="8746"/>
+      <attribute name="mime" value="application/java-archive"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="OFX200Callback"/>
+      <attribute name="type" value="jarfile"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="776d039aff123a120f51e9a2c1a04b7d2f4a73a758bf63505af656ea6733676a"/>
+      <attribute name="url" value="OFX200Callback.jar"/>
+      <attribute name="size" type="Long" value="6407"/>
+      <attribute name="mime" value="application/java-archive"/>
+    </capability>
+  </resource>
+</repository>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- START SNIPPET: beans -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop         
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+	<context:annotation-config/>
+	<bean id="BPWScheduleHandlerProviderImpl" class="com.ffusion.ffs.bpw.handler.BPWScheduleHandlerProviderImpl" />
+	
+	<bean id="OSGIUtil" class="com.ffusion.ffs.bpw.handler.OSGIUtil"/>
+	
+	<bean id="processPaymentProviderImpl" class="com.sap.banking.bpw.provider.ProcessPaymentProviderImpl" />
+
+	<bean id="sampleProcessPaymentImpl" class="com.sap.banking.bpw.provider.SampleProcessPaymentImpl"/>
+	
+	<!-- PerfInterceptor:A simple interceptor to profile service API call times.Logs timings to <code>com.ffusion.util.logging.PerfLog -->
+	<bean id="BpwSchedulesPerfInterceptor1" class="com.sap.banking.common.interceptors.PerfInterceptor" init-method="initialize">
+    </bean>
+
+	<util:map id="datasourceConfigProperties" map-class="java.util.HashMap" value-type="java.lang.String" key-type="java.lang.String">
+		<entry key="dbDriverClass" value="${datasource.driverClassName}"/>
+		<entry key="dbJdbcUrl" value="${datasource.jdbcUrl}"/>
+		<entry key="dbUsername" value="${datasource.username}"/>
+		<entry key="dbPassword" value="${datasource.password}"/>
+		<entry key="dbName" value="${db.name}"/>
+		<entry key="dbHost" value="${db.host}"/>
+		<entry key="dbPort" value="${db.port}"/>
+		<entry key="dbType" value="${db.type}"/>
+		<entry key="banksimMaxConnection" value="${banksim.db.maxconnections}"/>
+		<entry key="banksimDefaultConnection" value="${banksim.db.defaultconnections}"/>
+		<entry key="banksimDBType" value="${banksim.db.type}"/>
+		<entry key="eclipseLinkDBPlatform" value="${db.eclipslink.databasePlatform}"/>
+	</util:map>
+
+	<!--<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<property name="poolName" value="springHikariCP" />
+		<property name="connectionTestQuery" value="SELECT 1" />
+		<property name="jdbcUrl" value="${spring.datasource.url}" />
+		<property name="url" value="${spring.datasource.url}" />
+		<property name="username" value="${spring.datasource.username}" />
+		<property name="password" value="${spring.datasource.password}" />
+		<property name="autoCommit" value="${spring.datasource.hikari.auto-commit}"/>
+		<property name="transactionIsolation" value="${spring.datasource.hikari.transactionIsolation}"/>
+		<property name="dataSourceClassName" value="com.zaxxer.hikari.HikariDataSource" />
+		<property name="driverClassName" value="${spring.datasource.driver-class-name}" />
+		<property name="maximumPoolSize" value="${spring.datasource.hikari.maximumPoolSize}" />
+		<property name="idleTimeout" value="${spring.datasource.hikari.idleTimeout}" />-->
+
+		<!--<property name="dataSourceProperties">
+			<props>
+				<prop key="url">${spring.datasource.url}</prop>
+				<prop key="user">${spring.datasource.username}</prop>
+				<prop key="password">${spring.datasource.password}</prop>
+			</props>
+		</property>
+	</bean>-->
+
+    <!-- execution(* com.xyz.service.*.*(..))  means  execution of any method defined in the service package: -->
+    <aop:config>
+	    <aop:aspect id="aspectPerf1" ref="BpwSchedulesPerfInterceptor1">                                
+	          <aop:pointcut id="perfPCA2" 
+	                        expression="execution(* com.ffusion.ffs.bpw.handler.*.*(..)) or
+	                        execution(* com.sap.banking.bpw.provider.*.*(..)) or
+	                        execution(* com.ffusion.ffs.bpw.fulfill.handler.*.*(..)) or
+	                        execution(* com.ffusion.ffs.bpw.fulfill.checkfree.*.*(..)) or
+	                        execution(* com.ffusion.ffs.bpw.fulfill.metavante.*.*(..)) 	or
+	                        execution(* com.ffusion.ffs.bpw.fulfill.orcc.*.*(..)) or
+	                        execution(* com.ffusion.ffs.bpw.fulfill.socialpayment.*.*(..)) or
+	                        execution(* com.ffusion.banksim.proxy.*.*(..))
+	                        "/>  	                        
+	          <aop:around method="invoke" pointcut-ref="perfPCA2" />
+	    </aop:aspect>
+    </aop:config>
+
+</beans>

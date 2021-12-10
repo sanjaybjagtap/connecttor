@@ -1,0 +1,224 @@
+ 2021-07-28 20:50:51 INFO  [main] c.s.c.s.f.WebSocketDnfApplication - Starting WebSocketDnfApplication using Java 11.0.11 on Julin-SAP with PID 30872 (C:\OCB\ocb-connector\build\classes\java\main started by I537791 in C:\OCB\ocb-connector)
+ 2021-07-28 20:50:51 INFO  [main] c.s.c.s.f.WebSocketDnfApplication - The following profiles are active: dev
+ 2021-07-28 20:50:56 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - Loading encryption keys 
+ 2021-07-28 20:50:56 ERROR [main] c.s.b.c.e.EncryptionManagerImpl - EncryptionManagerImpl.afterPropertiesSet: KeyFileName not provided
+ 2021-07-28 20:50:56 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - EncryptionManagerImpl : ConfigurationUpdate received : {encrypt.transport.data=true, KeyFileName=C:/OCB_SAP_Stuff/OCB_SP05_PL05_V01/ocb/tomcat/config/keyfile.properties, encryption.standard=AES, ocb.hcp.enable=false}
+ 2021-07-28 20:50:56 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - EncryptionManagerImpl:EncryptionStandard changed to AES
+ 2021-07-28 20:50:56 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - EncryptionManagerImpl: KeyFileName updated to C:/OCB_SAP_Stuff/OCB_SP05_PL05_V01/ocb/tomcat/config/keyfile.properties 
+ 2021-07-28 20:50:56 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - Loading encryption keys 
+ 2021-07-28 20:50:56 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - Invalid key null 
+ 2021-07-28 20:50:56 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - Invalid key null 
+ 2021-07-28 20:50:56 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - Invalid key null 
+ 2021-07-28 20:50:56 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - Encryption keys loaded successfully for AES encryption with file C:/OCB_SAP_Stuff/OCB_SP05_PL05_V01/ocb/tomcat/config/keyfile.properties
+ 2021-07-28 20:50:56 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - ConfigurationUpdate successfull!
+ 2021-07-28 20:50:56 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Found 10 config files, registering config context
+ 2021-07-28 20:50:56 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.basconnector.common.cfg
+ 2021-07-28 20:50:56 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.basconnector.customref.bsf.cfg
+ 2021-07-28 20:50:56 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.basconnector.customref.epf.cfg
+ 2021-07-28 20:50:56 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.basconnector.customref.tcf.cfg
+ 2021-07-28 20:50:56 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.common_encryption.cfg
+ 2021-07-28 20:50:56 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.commonconfig.cfg
+ 2021-07-28 20:50:56 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.connectorlibconfig.cfg
+ 2021-07-28 20:50:56 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.ocbconfig.cfg
+ 2021-07-28 20:50:56 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.persistence.cfg
+ 2021-07-28 20:50:56 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : extended.cfg
+ 2021-07-28 20:50:56 INFO  [main] c.s.b.c.u.ApplicationPropertyPlaceholderConfigurer - #ApplicationPropertyPlaceholderConfigurer# : Configuration recieved
+ 2021-07-28 20:50:59 INFO  [main] c.s.c.s.f.s.s.ApplicationDefaultFactory - Plugins registered, 5 targets found!
+ 2021-07-28 20:50:59 WARN  [main] com.zaxxer.hikari.HikariConfig - ConnectorServerMNCP - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+ 2021-07-28 20:50:59 WARN  [main] com.zaxxer.hikari.HikariConfig - ConnectorServerMNCP - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+ 2021-07-28 20:50:59 INFO  [main] com.zaxxer.hikari.HikariDataSource - ConnectorServerMNCP - Starting...
+ 2021-07-28 20:50:59 INFO  [main] com.zaxxer.hikari.HikariDataSource - ConnectorServerMNCP - Starting...
+ 2021-07-28 20:50:59 INFO  [main] com.zaxxer.hikari.HikariDataSource - ConnectorServerMNCP - Start completed.
+ 2021-07-28 20:50:59 INFO  [main] com.zaxxer.hikari.HikariDataSource - ConnectorServerMNCP - Start completed.
+ 2021-07-28 20:51:00 INFO  [main] c.s.c.s.f.c.MessageActionController - Preparing inbound watchers!
+ 2021-07-28 20:51:00 INFO  [main] c.s.c.s.f.c.MessageActionController - Preparing outbound watchers!
+ 2021-07-28 20:51:01 INFO  [main] c.s.b.c.interceptors.PerfInterceptor - PerfInterceptor.initialize: Initialization complete.
+ 2021-07-28 20:51:04 WARN  [main] o.s.security.core.userdetails.User - User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+ 2021-07-28 20:51:06 INFO  [main] c.s.c.s.p.factory.ocb.StartupActions - Performing bootstrap tasks for business framework
+ 2021-07-28 20:51:06 WARN  [main] c.s.b.c.s.b.ConfigurationProperties - CONFIGURATION UPDATE#1 :Update for null
+ 2021-07-28 20:51:06 INFO  [main] c.s.b.c.s.b.ConfigurationProperties - ConfigurationUpdate Received for null:{csrf.dynamiCSRF.interval=0, remindme.minimum.lead.time=1, csrf.dynamiCSRF.mode=0, cb.ws.url=http://localhost:8080/cb, bc.ws.url=https://bca.cfapps.ap10.hana.ondemand.com/bc, system.user.id=-1, document.repository.username=ocb, enable.basic.http.authentication=false, document.repository.url=http://localhost:8090/repo/browser/ocb/root, bank.identifier.type=RoutingNumber, username.case.sensitive=false, platform.ws.url=http://localhost:8080/platform-web, account.transactions.prefetch.duration=180, document.repository.tokenkey=AC39AFF38E7A0345EC0B2464603BB5CF5B987EA87CCF45523AE34A4697412DD6, customer.segments.restservice.url=http://localhost:9800/customersegments, consumer.show.recurring.model=false, standard.http.code.for.odata.exceptions=true, csrf.dynamiCSRF.validateRefreshToken=false, proxy.server.connection.timeout=6000000, orb.obo.enabled=true, document.repository.auth.type=Basic, document.storage.type=FILE, banking.backend.type=banksim, document.repository.password=ocb, remindme.delay.period=2}
+ 2021-07-28 20:51:06 INFO  [main] c.s.b.c.s.b.ConfigurationProperties - ConfigurationUpdate successfull! {csrf.dynamiCSRF.interval=0, remindme.minimum.lead.time=1, csrf.dynamiCSRF.mode=0, cb.ws.url=http://localhost:8080/cb, bc.ws.url=https://bca.cfapps.ap10.hana.ondemand.com/bc, system.user.id=-1, document.repository.username=ocb, enable.basic.http.authentication=false, document.repository.url=http://localhost:8090/repo/browser/ocb/root, bank.identifier.type=RoutingNumber, username.case.sensitive=false, platform.ws.url=http://localhost:8080/platform-web, account.transactions.prefetch.duration=180, document.repository.tokenkey=AC39AFF38E7A0345EC0B2464603BB5CF5B987EA87CCF45523AE34A4697412DD6, customer.segments.restservice.url=http://localhost:9800/customersegments, consumer.show.recurring.model=false, standard.http.code.for.odata.exceptions=true, csrf.dynamiCSRF.validateRefreshToken=false, proxy.server.connection.timeout=6000000, orb.obo.enabled=true, document.repository.auth.type=Basic, document.storage.type=FILE, banking.backend.type=banksim, document.repository.password=ocb, remindme.delay.period=2}
+ 2021-07-28 20:51:06 INFO  [main] c.s.c.s.p.factory.ocb.StartupActions - Initializing business classes
+ 2021-07-28 20:51:06 INFO  [main] c.s.c.s.p.factory.ocb.StartupActions - Application context loaded successfully!
+ 2021-07-28 20:51:06 INFO  [main] c.s.c.s.f.WebSocketDnfApplication - Started WebSocketDnfApplication in 15.431 seconds (JVM running for 16.372)
+ 2021-07-28 20:53:54 WARN  [https-jsse-nio-5001-exec-9] o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [220] milliseconds.
+ 2021-07-28 21:26:33 WARN  [https-jsse-nio-5001-exec-5] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! ca399ea1-36dd-bafa-195f-e39b59bb97b4
+ 2021-07-28 21:26:33 WARN  [https-jsse-nio-5001-exec-4] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! babc2f84-cfe6-674e-c82f-716dba56af01
+ 2021-07-28 21:34:15 INFO  [pool-2-thread-1] c.s.c.s.f.c.MessageActionController - Processing message with ID 83553629-961b-483f-88b6-54cfd329f721
+ 2021-07-28 21:34:19 INFO  [pool-2-thread-1] c.s.c.s.plugins.handler.BPWPlugin - BPWEvent scheduleBatchRUn received : INTRATRN
+ 2021-07-28 21:34:33 INFO  [pool-2-thread-1] c.s.c.s.f.c.MessageActionController - Finished processing message with ID 83553629-961b-483f-88b6-54cfd329f721
+ 2021-07-28 22:04:17 WARN  [https-jsse-nio-5001-exec-9] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 64e15e46-d76e-3962-3cf6-6562d595ba83
+ 2021-07-28 22:06:57 WARN  [https-jsse-nio-5001-exec-10] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! fced06a3-82b9-8228-1eca-281ba33eab5e
+ 2021-07-28 22:06:57 WARN  [https-jsse-nio-5001-exec-1] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 6eb2b71f-f8de-55f3-ccb1-de054c8903b8
+ 2021-07-28 22:06:57 WARN  [https-jsse-nio-5001-exec-7] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 6f5d2a2e-56b4-d152-2714-de90747660d6
+ 2021-07-28 22:07:00 WARN  [https-jsse-nio-5001-exec-10] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! a237df8f-9e5c-ebfe-b6a0-48e95e138bc7
+ 2021-07-28 22:07:00 WARN  [https-jsse-nio-5001-exec-1] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! c2fdabd2-d165-4906-9f82-2d8f070ab774
+ 2021-07-28 22:07:00 WARN  [https-jsse-nio-5001-exec-7] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! c163bad7-38f7-a30f-6d92-8c229fe944a4
+ 2021-07-28 22:07:03 WARN  [https-jsse-nio-5001-exec-3] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! ed4d2287-0fb1-ecfa-3159-e8d7b0c75951
+ 2021-07-28 22:07:03 WARN  [https-jsse-nio-5001-exec-4] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 34264983-0211-c964-1360-b4d934027c90
+ 2021-07-28 22:07:03 WARN  [https-jsse-nio-5001-exec-8] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! e989bf93-0af1-159e-958f-4cc605f0ff46
+ 2021-07-28 22:07:06 WARN  [https-jsse-nio-5001-exec-10] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 6cc33f88-bd71-f7c8-03e4-e8f4a6c02965
+ 2021-07-28 22:07:06 WARN  [https-jsse-nio-5001-exec-1] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 6a50dff5-9fa7-92c8-3999-6d2e383fa4f9
+ 2021-07-28 22:07:06 WARN  [https-jsse-nio-5001-exec-7] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 2968d69a-b2dc-eaa8-2c93-7fdb89394c7f
+ 2021-07-28 22:07:18 WARN  [https-jsse-nio-5001-exec-3] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 5aa5148b-3a8f-c24a-32d9-c6af7de551dc
+ 2021-07-28 22:07:21 WARN  [https-jsse-nio-5001-exec-9] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 11bcfaf6-72b2-d39a-5499-16e55017d18d
+ 2021-07-28 22:07:21 WARN  [https-jsse-nio-5001-exec-2] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 0b5f5adb-d18a-896c-0258-5a132f1ba417
+ 2021-07-28 22:07:21 WARN  [https-jsse-nio-5001-exec-3] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 387c55c0-1dab-8317-5486-dd6fe95b211c
+ 2021-07-28 22:07:24 WARN  [https-jsse-nio-5001-exec-5] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 99e61940-6194-9392-5f40-97c939b36087
+ 2021-07-28 22:07:24 WARN  [https-jsse-nio-5001-exec-10] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 276d842c-024d-eed2-b798-733df228f941
+ 2021-07-28 22:07:24 WARN  [https-jsse-nio-5001-exec-1] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! f2fba37f-10d5-f7c8-3598-e7b878f17e82
+ 2021-07-28 22:07:27 WARN  [https-jsse-nio-5001-exec-3] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 8c2beb6b-de0b-61b4-faf5-5ea3725f3ea0
+ 2021-07-28 22:07:27 WARN  [https-jsse-nio-5001-exec-4] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! a7e2e0f4-d3da-c513-b3cb-7e52bdbc47a8
+ 2021-07-28 22:34:17 WARN  [https-jsse-nio-5001-exec-2] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 23be9760-8bfb-0537-98c6-f221c058d0af
+ 2021-07-28 22:37:10 WARN  [https-jsse-nio-5001-exec-4] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 3067a314-b277-c6a1-b79c-bd2dd6b3a42f
+ 2021-07-28 22:37:10 WARN  [https-jsse-nio-5001-exec-8] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! e46cc00f-2be7-0a00-4f4f-d89c45957874
+ 2021-07-28 22:37:10 WARN  [https-jsse-nio-5001-exec-5] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 35b3b17f-5421-3524-f280-e738fe67566e
+ 2021-07-28 22:37:13 WARN  [https-jsse-nio-5001-exec-8] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 6114a121-f1f6-03a5-8195-c1619fffa0c1
+ 2021-07-28 22:37:13 WARN  [https-jsse-nio-5001-exec-5] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 0ed7c529-85d7-c72e-f18e-d22ee5afa033
+ 2021-07-28 22:37:13 WARN  [https-jsse-nio-5001-exec-10] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! b2e27975-e3f7-abe7-5172-5ac35ee7852f
+ 2021-07-28 22:37:17 WARN  [https-jsse-nio-5001-exec-6] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 3456433a-03ce-52ab-0b79-be466341eed5
+ 2021-07-28 22:37:17 WARN  [https-jsse-nio-5001-exec-7] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! d3648e54-19f6-9de6-6992-e596454354e8
+ 2021-07-28 22:37:17 WARN  [https-jsse-nio-5001-exec-2] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 479d2d6e-e3d4-6609-5bf9-1c13c638a193
+ 2021-07-28 22:37:20 WARN  [https-jsse-nio-5001-exec-8] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 25ff741d-428b-6e8a-77e2-89c2cbe39bd4
+ 2021-07-28 22:37:20 WARN  [https-jsse-nio-5001-exec-5] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 8782262c-0c0f-21df-4086-f9d54ef36515
+ 2021-07-28 22:37:20 WARN  [https-jsse-nio-5001-exec-10] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! ebf5ac9f-207d-3026-aa0b-31da9975e50f
+ 2021-07-28 22:37:23 WARN  [https-jsse-nio-5001-exec-2] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 5b568c3c-baf8-ca86-dd16-f361b0b916c5
+ 2021-07-28 22:37:23 WARN  [https-jsse-nio-5001-exec-9] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! ce05bdd3-07ac-7eef-3900-09060e5416f8
+ 2021-07-28 22:37:23 WARN  [https-jsse-nio-5001-exec-3] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! ce831914-fbbd-0445-9af7-f921943a7a8c
+ 2021-07-28 22:37:26 WARN  [https-jsse-nio-5001-exec-1] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 5a8c5c22-6251-659b-dc97-fafdbe2b8c15
+ 2021-07-28 22:37:26 WARN  [https-jsse-nio-5001-exec-6] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 0dc1a749-35e1-7380-a1ae-433617d566ee
+ 2021-07-28 22:37:26 WARN  [https-jsse-nio-5001-exec-7] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 7f40697b-2f8e-c4fe-513c-a73dee6c1a2d
+ 2021-07-28 22:37:29 WARN  [https-jsse-nio-5001-exec-8] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! eacff881-9e31-30f9-62f0-26314ab31474
+ 2021-07-28 22:37:29 WARN  [https-jsse-nio-5001-exec-5] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 107bab13-7e49-060a-d8a5-bfb41a8e5308
+ 2021-07-28 22:40:36 INFO  [pool-2-thread-2] c.s.c.s.f.c.MessageActionController - Processing message with ID b22818e8-f9df-427d-8890-ebad2a53d7e0
+ 2021-07-28 22:40:40 INFO  [pool-2-thread-2] c.s.c.s.plugins.handler.BPWPlugin - BPWEvent scheduleBatchRUn received : INTRATRN
+ 2021-07-28 22:40:40 INFO  [pool-2-thread-2] c.s.c.s.f.c.MessageActionController - Finished processing message with ID b22818e8-f9df-427d-8890-ebad2a53d7e0
+ 2021-07-28 22:46:55 INFO  [pool-2-thread-3] c.s.c.s.f.c.MessageActionController - Processing message with ID 4cbff66c-e2fd-40a0-9044-6cb90101cc9d
+ 2021-07-28 22:47:12 INFO  [pool-2-thread-3] c.s.c.s.plugins.handler.BPWPlugin - BPWEvent scheduleBatchRUn received : INTRATRN
+ 2021-07-28 22:47:44 INFO  [pool-2-thread-3] c.s.c.s.f.c.MessageActionController - Finished processing message with ID 4cbff66c-e2fd-40a0-9044-6cb90101cc9d
+ 2021-07-28 23:00:00 INFO  [pool-2-thread-4] c.s.c.s.f.c.MessageActionController - Processing message with ID 537b256d-3420-41f9-a895-99cc8c7a5434
+ 2021-07-28 23:01:20 WARN  [ConnectorServerMNCP housekeeper] com.zaxxer.hikari.pool.HikariPool - ConnectorServerMNCP - Thread starvation or clock leap detected (housekeeper delta=1m38s18ms796탎400ns).
+ 2021-07-28 23:01:20 INFO  [pool-2-thread-4] c.s.c.s.plugins.handler.BPWPlugin - BPWEvent scheduleBatchRUn received : WIRETRN
+ 2021-07-28 23:01:20 WARN  [ConnectorServerMNCP housekeeper] com.zaxxer.hikari.pool.HikariPool - ConnectorServerMNCP - Thread starvation or clock leap detected (housekeeper delta=1m38s18ms796탎400ns).
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-1] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 79f87f1e-d814-4042-a683-ffcdd8635f76
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-18] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! fd169e7f-020e-fdbd-21f8-0acfc42842ac
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-4] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 0b3cdb3b-c77d-b07a-c5aa-e69a2b835ce2
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-14] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 6753a36f-7314-5ad5-9f8a-f58898e55c34
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-12] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 3c3a2b8a-d977-149c-3678-3242c0b676a8
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-5] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 0569c566-f216-88c8-4164-5ad4e1bbb02e
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-9] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 9c527e2d-27d8-500d-3fe3-2401b0af762a
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-16] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 4a161043-6730-982c-64a9-a2a0559badde
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-2] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 9990871b-f2c0-68bf-6543-008bf01c781d
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-7] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 470fabbe-f55e-41d9-b8a7-c51f701ec8e3
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-6] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! a5b80793-943f-5af6-96d1-16f5ac93590a
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-15] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 58d46d37-f335-910d-d49b-1f274cb94a82
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-3] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 19f05b7f-08b3-280c-cf22-57f38eeb2bc2
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-19] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! cad90963-7ef3-4c51-e7a7-20569b036b42
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-10] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 5ccea6d6-c311-69bb-0fa4-d1e2b1b4a817
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-13] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 3fb31680-4f1d-24db-b80c-8be553a825fe
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-11] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! c87173a1-daf4-6f56-3310-49247c0a8a5c
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-20] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 8bb1c250-0fc3-fdba-d186-735c71591543
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-22] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! cd28d596-fd44-cb6d-0f9d-6d3edfa029dd
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-17] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 6f1fda6c-cd10-b9c3-9bea-0effe9b4be3e
+ 2021-07-28 23:01:20 WARN  [https-jsse-nio-5001-exec-21] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 466d941a-b2aa-88c2-cbaf-e51b6fba2483
+ 2021-07-28 23:03:26 INFO  [pool-2-thread-4] c.s.c.s.f.c.MessageActionController - Finished processing message with ID 537b256d-3420-41f9-a895-99cc8c7a5434
+ 2021-07-28 23:04:15 INFO  [pool-2-thread-5] c.s.c.s.f.c.MessageActionController - Processing message with ID d8d51312-40cc-405d-ac30-9738052e8086
+ 2021-07-28 23:04:18 INFO  [pool-2-thread-5] c.s.c.s.plugins.handler.BPWPlugin - BPWEvent scheduleBatchRUn received : INTRATRN
+ 2021-07-29 10:40:15 INFO  [main] c.s.c.s.f.WebSocketDnfApplication - Starting WebSocketDnfApplication using Java 11.0.11 on Julin-SAP with PID 15968 (C:\OCB\ocb-connector\build\classes\java\main started by I537791 in C:\OCB\ocb-connector)
+ 2021-07-29 10:40:15 INFO  [main] c.s.c.s.f.WebSocketDnfApplication - The following profiles are active: dev
+ 2021-07-29 10:40:19 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - Loading encryption keys 
+ 2021-07-29 10:40:19 ERROR [main] c.s.b.c.e.EncryptionManagerImpl - EncryptionManagerImpl.afterPropertiesSet: KeyFileName not provided
+ 2021-07-29 10:40:19 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - EncryptionManagerImpl : ConfigurationUpdate received : {encrypt.transport.data=true, KeyFileName=C:/OCB_SAP_Stuff/OCB_SP05_PL05_V01/ocb/tomcat/config/keyfile.properties, encryption.standard=AES, ocb.hcp.enable=false}
+ 2021-07-29 10:40:19 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - EncryptionManagerImpl:EncryptionStandard changed to AES
+ 2021-07-29 10:40:19 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - EncryptionManagerImpl: KeyFileName updated to C:/OCB_SAP_Stuff/OCB_SP05_PL05_V01/ocb/tomcat/config/keyfile.properties 
+ 2021-07-29 10:40:19 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - Loading encryption keys 
+ 2021-07-29 10:40:19 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - Invalid key null 
+ 2021-07-29 10:40:19 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - Invalid key null 
+ 2021-07-29 10:40:19 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - Invalid key null 
+ 2021-07-29 10:40:19 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - Encryption keys loaded successfully for AES encryption with file C:/OCB_SAP_Stuff/OCB_SP05_PL05_V01/ocb/tomcat/config/keyfile.properties
+ 2021-07-29 10:40:19 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - ConfigurationUpdate successfull!
+ 2021-07-29 10:40:19 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Found 10 config files, registering config context
+ 2021-07-29 10:40:19 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.basconnector.common.cfg
+ 2021-07-29 10:40:19 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.basconnector.customref.bsf.cfg
+ 2021-07-29 10:40:19 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.basconnector.customref.epf.cfg
+ 2021-07-29 10:40:19 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.basconnector.customref.tcf.cfg
+ 2021-07-29 10:40:19 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.common_encryption.cfg
+ 2021-07-29 10:40:19 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.commonconfig.cfg
+ 2021-07-29 10:40:19 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.connectorlibconfig.cfg
+ 2021-07-29 10:40:19 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.ocbconfig.cfg
+ 2021-07-29 10:40:19 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.persistence.cfg
+ 2021-07-29 10:40:19 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : extended.cfg
+ 2021-07-29 10:40:19 INFO  [main] c.s.b.c.u.ApplicationPropertyPlaceholderConfigurer - #ApplicationPropertyPlaceholderConfigurer# : Configuration recieved
+ 2021-07-29 10:40:21 INFO  [main] c.s.c.s.f.s.s.ApplicationDefaultFactory - Plugins registered, 5 targets found!
+ 2021-07-29 10:40:21 WARN  [main] com.zaxxer.hikari.HikariConfig - ConnectorServerMNCP - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+ 2021-07-29 10:40:21 WARN  [main] com.zaxxer.hikari.HikariConfig - ConnectorServerMNCP - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+ 2021-07-29 10:40:21 INFO  [main] com.zaxxer.hikari.HikariDataSource - ConnectorServerMNCP - Starting...
+ 2021-07-29 10:40:21 INFO  [main] com.zaxxer.hikari.HikariDataSource - ConnectorServerMNCP - Starting...
+ 2021-07-29 10:40:22 INFO  [main] com.zaxxer.hikari.HikariDataSource - ConnectorServerMNCP - Start completed.
+ 2021-07-29 10:40:22 INFO  [main] com.zaxxer.hikari.HikariDataSource - ConnectorServerMNCP - Start completed.
+ 2021-07-29 10:40:22 INFO  [main] c.s.c.s.f.c.MessageActionController - Preparing inbound watchers!
+ 2021-07-29 10:40:22 INFO  [main] c.s.c.s.f.c.MessageActionController - Preparing outbound watchers!
+ 2021-07-29 10:40:23 INFO  [main] c.s.b.c.interceptors.PerfInterceptor - PerfInterceptor.initialize: Initialization complete.
+ 2021-07-29 10:40:25 WARN  [main] o.s.security.core.userdetails.User - User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+ 2021-07-29 10:40:26 INFO  [main] c.s.c.s.p.factory.ocb.StartupActions - Performing bootstrap tasks for business framework
+ 2021-07-29 10:40:26 WARN  [main] c.s.b.c.s.b.ConfigurationProperties - CONFIGURATION UPDATE#1 :Update for null
+ 2021-07-29 10:40:26 INFO  [main] c.s.b.c.s.b.ConfigurationProperties - ConfigurationUpdate Received for null:{csrf.dynamiCSRF.interval=0, remindme.minimum.lead.time=1, csrf.dynamiCSRF.mode=0, cb.ws.url=http://localhost:8080/cb, bc.ws.url=https://bca.cfapps.ap10.hana.ondemand.com/bc, system.user.id=-1, document.repository.username=ocb, enable.basic.http.authentication=false, document.repository.url=http://localhost:8090/repo/browser/ocb/root, bank.identifier.type=RoutingNumber, username.case.sensitive=false, platform.ws.url=http://localhost:8080/platform-web, account.transactions.prefetch.duration=180, document.repository.tokenkey=AC39AFF38E7A0345EC0B2464603BB5CF5B987EA87CCF45523AE34A4697412DD6, customer.segments.restservice.url=http://localhost:9800/customersegments, consumer.show.recurring.model=false, standard.http.code.for.odata.exceptions=true, csrf.dynamiCSRF.validateRefreshToken=false, proxy.server.connection.timeout=6000000, orb.obo.enabled=true, document.repository.auth.type=Basic, document.storage.type=FILE, banking.backend.type=banksim, document.repository.password=ocb, remindme.delay.period=2}
+ 2021-07-29 10:40:26 INFO  [main] c.s.b.c.s.b.ConfigurationProperties - ConfigurationUpdate successfull! {csrf.dynamiCSRF.interval=0, remindme.minimum.lead.time=1, csrf.dynamiCSRF.mode=0, cb.ws.url=http://localhost:8080/cb, bc.ws.url=https://bca.cfapps.ap10.hana.ondemand.com/bc, system.user.id=-1, document.repository.username=ocb, enable.basic.http.authentication=false, document.repository.url=http://localhost:8090/repo/browser/ocb/root, bank.identifier.type=RoutingNumber, username.case.sensitive=false, platform.ws.url=http://localhost:8080/platform-web, account.transactions.prefetch.duration=180, document.repository.tokenkey=AC39AFF38E7A0345EC0B2464603BB5CF5B987EA87CCF45523AE34A4697412DD6, customer.segments.restservice.url=http://localhost:9800/customersegments, consumer.show.recurring.model=false, standard.http.code.for.odata.exceptions=true, csrf.dynamiCSRF.validateRefreshToken=false, proxy.server.connection.timeout=6000000, orb.obo.enabled=true, document.repository.auth.type=Basic, document.storage.type=FILE, banking.backend.type=banksim, document.repository.password=ocb, remindme.delay.period=2}
+ 2021-07-29 10:40:26 INFO  [main] c.s.c.s.p.factory.ocb.StartupActions - Initializing business classes
+ 2021-07-29 10:40:26 INFO  [main] c.s.c.s.p.factory.ocb.StartupActions - Application context loaded successfully!
+ 2021-07-29 10:40:26 INFO  [main] c.s.c.s.f.WebSocketDnfApplication - Started WebSocketDnfApplication in 11.133 seconds (JVM running for 11.868)
+ 2021-07-29 10:42:16 INFO  [pool-2-thread-1] c.s.c.s.f.c.MessageActionController - Processing message with ID 67b65485-cb46-472f-b4d4-74317ecababb
+ 2021-07-29 10:42:16 INFO  [pool-2-thread-1] c.s.c.s.plugins.handler.BPWPlugin - BPWEvent scheduleBatchRUn received : INTRATRN
+ 2021-07-29 10:42:17 INFO  [pool-2-thread-1] c.s.c.s.f.c.MessageActionController - Finished processing message with ID 67b65485-cb46-472f-b4d4-74317ecababb
+ 2021-07-29 10:43:05 INFO  [main] c.s.c.s.f.WebSocketDnfApplication - Starting WebSocketDnfApplication using Java 11.0.11 on Julin-SAP with PID 21476 (C:\OCB\ocb-connector\build\classes\java\main started by I537791 in C:\OCB\ocb-connector)
+ 2021-07-29 10:43:05 INFO  [main] c.s.c.s.f.WebSocketDnfApplication - The following profiles are active: dev
+ 2021-07-29 10:43:10 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - Loading encryption keys 
+ 2021-07-29 10:43:10 ERROR [main] c.s.b.c.e.EncryptionManagerImpl - EncryptionManagerImpl.afterPropertiesSet: KeyFileName not provided
+ 2021-07-29 10:43:10 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - EncryptionManagerImpl : ConfigurationUpdate received : {encrypt.transport.data=true, KeyFileName=C:/OCB_SAP_Stuff/OCB_SP05_PL05_V01/ocb/tomcat/config/keyfile.properties, encryption.standard=AES, ocb.hcp.enable=false}
+ 2021-07-29 10:43:10 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - EncryptionManagerImpl:EncryptionStandard changed to AES
+ 2021-07-29 10:43:10 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - EncryptionManagerImpl: KeyFileName updated to C:/OCB_SAP_Stuff/OCB_SP05_PL05_V01/ocb/tomcat/config/keyfile.properties 
+ 2021-07-29 10:43:10 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - Loading encryption keys 
+ 2021-07-29 10:43:10 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - Invalid key null 
+ 2021-07-29 10:43:10 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - Invalid key null 
+ 2021-07-29 10:43:10 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - Invalid key null 
+ 2021-07-29 10:43:10 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - Encryption keys loaded successfully for AES encryption with file C:/OCB_SAP_Stuff/OCB_SP05_PL05_V01/ocb/tomcat/config/keyfile.properties
+ 2021-07-29 10:43:10 INFO  [main] c.s.b.c.e.EncryptionManagerImpl - ConfigurationUpdate successfull!
+ 2021-07-29 10:43:10 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Found 10 config files, registering config context
+ 2021-07-29 10:43:10 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.basconnector.common.cfg
+ 2021-07-29 10:43:10 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.basconnector.customref.bsf.cfg
+ 2021-07-29 10:43:10 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.basconnector.customref.epf.cfg
+ 2021-07-29 10:43:10 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.basconnector.customref.tcf.cfg
+ 2021-07-29 10:43:10 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.common_encryption.cfg
+ 2021-07-29 10:43:10 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.commonconfig.cfg
+ 2021-07-29 10:43:10 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.connectorlibconfig.cfg
+ 2021-07-29 10:43:10 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.ocbconfig.cfg
+ 2021-07-29 10:43:10 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : com.sap.banking.persistence.cfg
+ 2021-07-29 10:43:10 INFO  [main] c.s.c.s.p.factory.OCBRootFactory - Registering : extended.cfg
+ 2021-07-29 10:43:10 INFO  [main] c.s.b.c.u.ApplicationPropertyPlaceholderConfigurer - #ApplicationPropertyPlaceholderConfigurer# : Configuration recieved
+ 2021-07-29 10:43:13 INFO  [main] c.s.c.s.f.s.s.ApplicationDefaultFactory - Plugins registered, 5 targets found!
+ 2021-07-29 10:43:13 WARN  [main] com.zaxxer.hikari.HikariConfig - ConnectorServerMNCP - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+ 2021-07-29 10:43:13 WARN  [main] com.zaxxer.hikari.HikariConfig - ConnectorServerMNCP - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+ 2021-07-29 10:43:13 INFO  [main] com.zaxxer.hikari.HikariDataSource - ConnectorServerMNCP - Starting...
+ 2021-07-29 10:43:13 INFO  [main] com.zaxxer.hikari.HikariDataSource - ConnectorServerMNCP - Starting...
+ 2021-07-29 10:43:13 INFO  [main] com.zaxxer.hikari.HikariDataSource - ConnectorServerMNCP - Start completed.
+ 2021-07-29 10:43:13 INFO  [main] com.zaxxer.hikari.HikariDataSource - ConnectorServerMNCP - Start completed.
+ 2021-07-29 10:43:14 INFO  [main] c.s.c.s.f.c.MessageActionController - Preparing inbound watchers!
+ 2021-07-29 10:43:14 INFO  [main] c.s.c.s.f.c.MessageActionController - Preparing outbound watchers!
+ 2021-07-29 10:43:15 INFO  [main] c.s.b.c.interceptors.PerfInterceptor - PerfInterceptor.initialize: Initialization complete.
+ 2021-07-29 10:43:17 WARN  [main] o.s.security.core.userdetails.User - User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+ 2021-07-29 10:43:18 INFO  [main] c.s.c.s.p.factory.ocb.StartupActions - Performing bootstrap tasks for business framework
+ 2021-07-29 10:43:18 WARN  [main] c.s.b.c.s.b.ConfigurationProperties - CONFIGURATION UPDATE#1 :Update for null
+ 2021-07-29 10:43:18 INFO  [main] c.s.b.c.s.b.ConfigurationProperties - ConfigurationUpdate Received for null:{csrf.dynamiCSRF.interval=0, remindme.minimum.lead.time=1, csrf.dynamiCSRF.mode=0, cb.ws.url=http://localhost:8080/cb, bc.ws.url=https://bca.cfapps.ap10.hana.ondemand.com/bc, system.user.id=-1, document.repository.username=ocb, enable.basic.http.authentication=false, document.repository.url=http://localhost:8090/repo/browser/ocb/root, bank.identifier.type=RoutingNumber, username.case.sensitive=false, platform.ws.url=http://localhost:8080/platform-web, account.transactions.prefetch.duration=180, document.repository.tokenkey=AC39AFF38E7A0345EC0B2464603BB5CF5B987EA87CCF45523AE34A4697412DD6, customer.segments.restservice.url=http://localhost:9800/customersegments, consumer.show.recurring.model=false, standard.http.code.for.odata.exceptions=true, csrf.dynamiCSRF.validateRefreshToken=false, proxy.server.connection.timeout=6000000, orb.obo.enabled=true, document.repository.auth.type=Basic, document.storage.type=FILE, banking.backend.type=banksim, document.repository.password=ocb, remindme.delay.period=2}
+ 2021-07-29 10:43:18 INFO  [main] c.s.b.c.s.b.ConfigurationProperties - ConfigurationUpdate successfull! {csrf.dynamiCSRF.interval=0, remindme.minimum.lead.time=1, csrf.dynamiCSRF.mode=0, cb.ws.url=http://localhost:8080/cb, bc.ws.url=https://bca.cfapps.ap10.hana.ondemand.com/bc, system.user.id=-1, document.repository.username=ocb, enable.basic.http.authentication=false, document.repository.url=http://localhost:8090/repo/browser/ocb/root, bank.identifier.type=RoutingNumber, username.case.sensitive=false, platform.ws.url=http://localhost:8080/platform-web, account.transactions.prefetch.duration=180, document.repository.tokenkey=AC39AFF38E7A0345EC0B2464603BB5CF5B987EA87CCF45523AE34A4697412DD6, customer.segments.restservice.url=http://localhost:9800/customersegments, consumer.show.recurring.model=false, standard.http.code.for.odata.exceptions=true, csrf.dynamiCSRF.validateRefreshToken=false, proxy.server.connection.timeout=6000000, orb.obo.enabled=true, document.repository.auth.type=Basic, document.storage.type=FILE, banking.backend.type=banksim, document.repository.password=ocb, remindme.delay.period=2}
+ 2021-07-29 10:43:18 INFO  [main] c.s.c.s.p.factory.ocb.StartupActions - Initializing business classes
+ 2021-07-29 10:43:18 INFO  [main] c.s.c.s.p.factory.ocb.StartupActions - Application context loaded successfully!
+ 2021-07-29 10:43:18 INFO  [main] c.s.c.s.f.WebSocketDnfApplication - Started WebSocketDnfApplication in 14.416 seconds (JVM running for 15.447)
+ 2021-07-29 10:43:53 INFO  [pool-2-thread-1] c.s.c.s.f.c.MessageActionController - Processing message with ID a2ce0a52-999c-4414-8aee-4bc424f0e973
+ 2021-07-29 10:43:56 INFO  [pool-2-thread-1] c.s.c.s.plugins.handler.BPWPlugin - BPWEvent scheduleBatchRUn received : INTRATRN
+ 2021-07-29 10:45:36 INFO  [pool-2-thread-1] c.s.c.s.f.c.MessageActionController - Finished processing message with ID a2ce0a52-999c-4414-8aee-4bc424f0e973
+ 2021-07-29 10:45:36 WARN  [ConnectorServerMNCP housekeeper] com.zaxxer.hikari.pool.HikariPool - ConnectorServerMNCP - Thread starvation or clock leap detected (housekeeper delta=1m20s113ms836탎300ns).
+ 2021-07-29 10:45:36 WARN  [ConnectorServerMNCP housekeeper] com.zaxxer.hikari.pool.HikariPool - ConnectorServerMNCP - Thread starvation or clock leap detected (housekeeper delta=1m20s113ms836탎300ns).
+ 2021-07-29 10:45:36 WARN  [https-jsse-nio-5001-exec-2] c.s.c.s.f.s.c.ConnectionEventListeners - Disconnected !! 84aa4635-6bc1-b948-35d1-104e5d34d007
+ 2021-07-29 10:45:46 INFO  [pool-2-thread-2] c.s.c.s.f.c.MessageActionController - Processing message with ID 8f030212-32c6-4a70-b23d-0ec9a0d2b62f
+ 2021-07-29 10:45:49 INFO  [pool-2-thread-2] c.s.c.s.plugins.handler.BPWPlugin - BPWEvent scheduleBatchRUn received : INTRATRN
+ 2021-07-29 10:46:28 INFO  [pool-2-thread-2] c.s.c.s.f.c.MessageActionController - Finished processing message with ID 8f030212-32c6-4a70-b23d-0ec9a0d2b62f
