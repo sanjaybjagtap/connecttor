@@ -54,6 +54,7 @@ jobs:
 
       - uses: garethr/snyk-to-sarif@master
       - uses: actions/upload-artifact@v2
+        continue-on-error: true # To make sure that SARIF upload gets called
         with:
           name: SARIF 
           path: snyk.sarif
@@ -62,3 +63,6 @@ jobs:
         uses: github/codeql-action/upload-sarif@v1
         with:
           sarif_file: snyk.sarif
+
+
+
