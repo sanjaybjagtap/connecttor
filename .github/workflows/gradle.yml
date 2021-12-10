@@ -25,7 +25,30 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-    - name: Build with Gradle
-      uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        
+    # - name: Build with Gradle
+    #   uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+    #   with:
+    #     arguments: build
+
+
+    # try out snyk
+    - name: Run Snyk to check for vulnerabilities
+      uses: snyk/actions/gradle@master
+      continue-on-error: true # To make sure that SARIF upload gets called
+      env:
+       SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       with:
-        arguments: build
+        args: --sarif-file-output=snyk.sarif
+        json: true
+
+    - uses: garethr/snyk-to-sarif@master
+    - uses: actions/upload-artifact@v2
+      with:
+        name: SARIF
+        path: snyk.sarif
+
+    - name: Upload result to GitHub Code Scanning
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: snyk.sarif
