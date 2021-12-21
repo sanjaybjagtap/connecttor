@@ -49,7 +49,6 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           image: msuryawanshi/connector:v1.1
-          args: --severity-threshold=high
           args: --sarif-file-output=snyk.sarif
           json: true
 
