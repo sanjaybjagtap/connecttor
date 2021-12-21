@@ -50,7 +50,6 @@ jobs:
         with:
           image: msuryawanshi/connector:v1.1
           args: --sarif-file-output=snyk.sarif
-          json: true
 
 
 
