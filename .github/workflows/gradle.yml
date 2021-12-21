@@ -54,17 +54,17 @@ jobs:
       - name: gatther
         uses: garethr/snyk-to-sarif@master
 
-      - name: upload
-        uses: actions/upload-artifact@v2  
-        with:
-          name: SARIF 
-          path: snyk.sarif
-
-
-      # - name: upload Snyk scan SARIF report
-      #   uses: github/codeql-action/upload-sarif@v1
+      # - name: upload
+      #   uses: actions/upload-artifact@v2  
       #   with:
-      #     sarif_file: snyk.sarif
+      #     name: SARIF 
+      #     path: snyk.sarif
+
+
+      - name: upload Snyk scan SARIF report
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file: snyk.sarif
 
 
 
