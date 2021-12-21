@@ -51,12 +51,17 @@ jobs:
           image: msuryawanshi/connector:v1.1
           args: --sarif-file-output=snyk.sarif
 
+        - uses: garethr/snyk-to-sarif@master
+        - uses: actions/upload-artifact@v2  
+          with:
+            name: SARIF 
+            path: snyk.sarif
 
 
-      - name: upload Snyk scan SARIF report
-        uses: github/codeql-action/upload-sarif@v1
-        with:
-          sarif_file: snyk.sarif
+      # - name: upload Snyk scan SARIF report
+      #   uses: github/codeql-action/upload-sarif@v1
+      #   with:
+      #     sarif_file: snyk.sarif
 
 
 
