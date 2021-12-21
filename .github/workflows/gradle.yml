@@ -51,8 +51,8 @@ jobs:
           image: msuryawanshi/connector:v1.1
           # args: --sarif-file-output=snyk.sarif
 
-      - name: gatther
-        uses: garethr/snyk-to-sarif@master
+      # - name: gatther
+      #   uses: garethr/snyk-to-sarif@master
 
       # - name: upload
       #   uses: actions/upload-artifact@v2  
