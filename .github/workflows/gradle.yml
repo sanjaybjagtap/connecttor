@@ -51,11 +51,14 @@ jobs:
           image: msuryawanshi/connector:v1.1
           args: --sarif-file-output=snyk.sarif
 
-        - uses: garethr/snyk-to-sarif@master
-        - uses: actions/upload-artifact@v2  
-          with:
-            name: SARIF 
-            path: snyk.sarif
+      - name: gatther
+        uses: garethr/snyk-to-sarif@master
+
+      - name: upload
+        uses: actions/upload-artifact@v2  
+        with:
+          name: SARIF 
+          path: snyk.sarif
 
 
       # - name: upload Snyk scan SARIF report
