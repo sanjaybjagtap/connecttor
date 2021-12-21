@@ -50,6 +50,8 @@ jobs:
         with:
           image: msuryawanshi/connector:v1.1
           args: --severity-threshold=high
+          json: true
+
 
 
       - name: upload Snyk scan SARIF report
