@@ -1,4 +1,4 @@
-FROM openjdk:11
+FROM openjdk:13.0.1
 
 ARG JAR_FILE=build/libs/c*.jar
 
