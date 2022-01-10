@@ -49,16 +49,15 @@ jobs:
       #   run: ./gradlew -b ci.gradle package
 
 
-      - name: Login
-        uses: atlassian/gajira-login@master
-        env:
-          JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
-          JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
-          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
-        
-      - name: Create new issue
-        id: create
-        uses: atlassian/gajira-create@master
+  send-slack-msg:      
+    - name: Post to a Slack channel
+      id: slack
+      uses: slackapi/slack-github-action@v1.16.0
+      with:
+        channel-id: C02T5999HLN 
+        slack-message: 'posting from a github action!'
+      env:
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
 
       # - name: Create JIRA Issue
       #   id: create
@@ -71,8 +70,8 @@ jobs:
       #     description: |
       #       Compare branch
 
-      - name: Log created issue
-        run: echo "Issue ${{ steps.create.outputs.issue }} was created"
+      # - name: Log created issue
+      #   run: echo "Issue ${{ steps.create.outputs.issue }} was created"
         
       # - name: Run Snyk to check Docker image for vulnerabilities
       #   uses: snyk/actions/docker@master
