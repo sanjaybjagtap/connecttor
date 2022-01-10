@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!--<bean id="customLimitCheckApprovalProcessorImpl" class="com.ffusion.ffs.bpw.custimpl.limits.CustomLimitCheckApprovalProcessorImpl"/>-->
+	<!-- limit check processor has been replace with CustomLimitCheckApprovalProcessorMock-->
+
+	<bean id="macGeneratorImpl" class="com.ffusion.ffs.bpw.custimpl.MacGeneratorImpl"/>
+
+	<bean id="transferCalloutHandlerImpl" class="com.ffusion.ffs.bpw.custimpl.transfers.TransferCalloutHandlerImpl"  init-method="start" destroy-method="stop"/>
+	<bean id="scheduleCalloutHandler" class="com.ffusion.ffs.bpw.custimpl.ScheduleCalloutHandler"/>
+	<bean id="bankSimulatorImpl" class="com.ffusion.ffs.bpw.custimpl.BankSimulatorImpl" />
+
+	<bean id="backendProviderImpl" class="com.ffusion.ffs.bpw.custimpl.BackendProviderImpl" />
+
+	<bean id="customDateProviderImpl" class="com.ffusion.ffs.bpw.custimpl.CustomDateProviderImpl" />
+
+	<!--<bean id="OSGIUtil" class="com.ffusion.ffs.bpw.custimpl.OSGIUtil"/>-->
+
+	<!--<bean id="BpwCustImplPerfInterceptor1" class="com.sap.banking.common.interceptors.PerfInterceptor" init-method="initialize">
+    </bean>-->
+
+	<bean id="transactionStatusProviderImpl" class="com.ffusion.ffs.bpw.custimpl.TransactionStatusProviderImpl" />
+	
+	<bean id="reconciliationProviderImpl" class="com.ffusion.ffs.bpw.custimpl.ReconciliationProviderImpl" />
+
+	<util:list id ="reconciliationProviderService" value-type="com.ffusion.ffs.bpw.custimpl.interfaces.ReconciliationProvider">
+		<ref bean="reconciliationProviderImpl"/>
+	</util:list>
+
+</beans>

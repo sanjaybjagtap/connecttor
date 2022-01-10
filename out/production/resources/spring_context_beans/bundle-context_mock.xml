@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- Enable annotation based interception. -->
+	<context:annotation-config/>
+
+	<!--  Initialize cluster service (mock) -->
+	<bean id="clusterService" class="com.sap.connector.server.plugins.factory.ocb.mock.ClusterMockImpl"/>
+
+	<!--  Initialize notifier service (mock) -->
+	<bean id="notifierService" class="com.sap.connector.server.plugins.factory.ocb.mock.NotifierMockImpl"/>
+
+	<!-- Initialize payment provider (mock) -->
+	<util:list id="processPayments" value-type="com.ffusion.ffs.bpw.interfaces.ProcessPayment">
+	</util:list>
+
+	<!-- Empty file config instance -->
+	<bean id="commonFileConfig" class="com.sap.banking.commonconfig.bo.CommonFileConfigImpl"/>
+
+	<!--  Initialize connector service (mock) -->
+	<bean id="connectorLibInterface" class="com.sap.connector.server.plugins.factory.ocb.mock.ConnectorBOMock"/>
+
+	<bean id="connectorLibConfig" class="java.util.Properties"/>
+
+	<bean id="forexService" class="com.sap.connector.server.plugins.factory.ocb.mock.ForeignExchangeServiceMockImpl"/>
+
+	<bean id="limitCheckProcessorMock" class="com.sap.connector.server.plugins.factory.ocb.mock.CustomLimitCheckApprovalProcessorMock"/>
+
+</beans>

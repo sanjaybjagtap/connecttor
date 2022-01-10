@@ -48,6 +48,7 @@ jobs:
       - name: Run the Gradle package task
         run: ./gradlew -b ci.gradle package
         
+        
       # - name: Run Snyk to check Docker image for vulnerabilities
       #   uses: snyk/actions/docker@master
       #   continue-on-error: true

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- START SNIPPET: beans -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop         
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+">
+
+	<!-- Enable annotation based interception. -->
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+	<context:annotation-config/>
+	
+	<bean id="BPWFulfillmentHandlerProviderImpl" class="com.ffusion.ffs.bpw.fulfill.handler.BPWFulfillmentHandlerProviderImpl"/>
+
+	<bean id="fileHandlerProvider" class="com.sap.banking.io.provider.impl.FileHandlerProviderImpl"  />
+	<bean id="systemFileHandlerRef" class="com.sap.banking.io.impl.FileHandlerImpl"  />
+	<bean id="repositoryFileHandlerRef" class="com.sap.banking.io.impl.DocumentHandlerServiceImpl"  />
+
+	<bean id="checkFreeHandler" class="com.ffusion.ffs.bpw.fulfill.checkfree.CheckFreeHandler" destroy-method="shutdown" >
+		<property name="fileHandlerProvider" ref="fileHandlerProvider"></property>
+	</bean>
+	<bean id="metavanteHandler" class="com.ffusion.ffs.bpw.fulfill.metavante.MetavanteHandler" destroy-method="shutdown" depends-on="fileHandlerProvider" />
+	<bean id="ON_USHandler" class="com.ffusion.ffs.bpw.fulfill.handler.ON_USHandler" destroy-method="shutdown" depends-on="fileHandlerProvider" />
+	<bean id="ORCCHandler" class="com.ffusion.ffs.bpw.fulfill.orcc.ORCCHandler" destroy-method="shutdown">
+		<property name="fileHandlerProvider" ref="fileHandlerProvider"></property>
+	</bean>
+	<bean id="sampleFulfillmentHandler" class="com.ffusion.ffs.bpw.fulfill.handler.SampleFulfillmentHandler" destroy-method="shutdown" depends-on="fileHandlerProvider" />
+
+	<!--<bean id="OSGIUtil" class="com.ffusion.ffs.bpw.fulfill.handler.OSGIUtil"/>-->
+	
+	<bean id="sAPPEHandler" class="com.ffusion.ffs.bpw.fulfill.handler.SAPPEHandler" init-method="start" destroy-method="shutdown" depends-on="fileHandlerProvider" />
+	
+	<bean id="sAPPEImmediateHandler" class="com.ffusion.ffs.bpw.fulfill.handler.SAPPEImmediateHandler" />
+	
+	<bean id="mobilePaymentHandler" class="com.ffusion.ffs.bpw.fulfill.socialpayment.MobilePaymentHandler" />
+	<bean id="mobilePaymentImmediateHandler" class="com.ffusion.ffs.bpw.fulfill.socialpayment.MobilePaymentImmediateHandlerImpl" />
+	
+	<bean id="socialPaymentHandler" class="com.ffusion.ffs.bpw.fulfill.socialpayment.SocialPaymentHandler" />
+	<bean id="socialPaymentImmediateHandler" class="com.ffusion.ffs.bpw.fulfill.socialpayment.SocialPaymentImmediateHandlerImpl" />
+</beans>

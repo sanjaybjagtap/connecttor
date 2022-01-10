@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- START SNIPPET: beans -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:osgix="http://www.eclipse.org/gemini/blueprint/schema/blueprint-compendium"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop         
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.eclipse.org/gemini/blueprint/schema/blueprint-compendium 
+		http://www.eclipse.org/gemini/blueprint/schema/blueprint-compendium/gemini-blueprint-compendium-1.0.xsd
+		http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd
+">
+
+	<context:annotation-config/>
+
+	<bean id="bankingBackendImpl" class="com.ffusion.banksim.proxy.BankingBackendImpl" init-method="init">
+		<property name="dbUrl" value="${datasource.jdbcUrl}" />
+		<property name="dbUser" value="${datasource.username}" />
+		<property name="dbPassword" value="${datasource.password}" />
+		<property name="dbDriver" value="${datasource.driverClassName}" />
+		<property name="dbType" value="${db.type}" />
+		<property name="dbMaxConnections" value="${banksim.db.maxconnections}" />
+	</bean>
+
+	<bean id="bankingBackendRef" class="com.ffusion.banksim.proxy.BankingBackendImpl"/>
+
+	<bean id="realTimebankingBackendImpl" class="com.ffusion.banksim.proxy.RealTimeBankingBackendImpl" destroy-method="close" />
+
+	<util:list id ="realTimeBankingBackendServices" value-type="com.ffusion.banksim.interfaces.RealTimeBankingBackend">
+		<ref bean="realTimebankingBackendImpl"/>
+	</util:list>
+</beans>

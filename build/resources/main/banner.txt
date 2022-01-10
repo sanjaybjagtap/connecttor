@@ -1,0 +1,9 @@
+${AnsiColor.RED}
+${AnsiColor.RED}  .g8"""bgd `7MN.   `7MF'     .M"""bgd
+${AnsiColor.RED}.dP'     `M   MMN.    M      ,MI    "Y
+${AnsiColor.RED}dM'       `   M YMb   M      `MMb.      .gP"Ya `7Mb,od8 `7M'   `MF'.gP"Ya `7Mb,od8
+${AnsiColor.RED}MM            M  `MN. M        `YMMNq. ,M'   Yb  MM' "'   VA   ,V ,M'   Yb  MM' "'
+${AnsiColor.RED}MM.           M   `MM.M      .     `MM 8M""""""  MM        VA ,V  8M""""""  MM
+${AnsiColor.RED}`Mb.     ,'   M     YMM      Mb     dM YM.    ,  MM         VVV   YM.    ,  MM
+${AnsiColor.RED}  `"bmmmd'  .JML.    YM      P"Ybmmd"   `Mbmmd'.JMML.        W     `Mbmmd'.JMML.
+${AnsiColor.RED}

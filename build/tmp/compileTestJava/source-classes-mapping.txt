@@ -1,0 +1,2 @@
+com/sap/connector/server/WebSocketDnfApplicationTests.java
+ com.sap.connector.server.WebSocketDnfApplicationTests

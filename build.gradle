@@ -75,3 +75,13 @@ sourceSets {
 		}
 	}
 }
+
+test{
+	useTestNG(){
+		suites 'testing.xml'
+
+		useDefaultListeners = true
+
+		outputDirectory = file("$projectDir/testingOutPut")
+	}
+}
