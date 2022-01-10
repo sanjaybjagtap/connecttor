@@ -49,15 +49,17 @@ jobs:
       #   run: ./gradlew -b ci.gradle package
 
 
-  send-slack-msg:      
-    - name: Post to a Slack channel
-      id: slack
-      uses: slackapi/slack-github-action@v1.16.0
-      with:
-        channel-id: C02T5999HLN 
-        slack-message: 'posting from a github action!'
-      env:
-        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+  send-slack-msg: 
+    runs-on: ubuntu-latest   
+    steps:  
+      - name: Post to a Slack channel
+        id: slack
+        uses: slackapi/slack-github-action@v1.16.0
+        with:
+          channel-id: C02T5999HLN 
+          slack-message: 'posting from a github action!'
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
 
       # - name: Create JIRA Issue
       #   id: create
